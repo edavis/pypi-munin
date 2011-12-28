@@ -92,4 +92,4 @@ if __name__ == "__main__":
             print config()
         elif sys.argv[1] == 'cache':
             cache()
-
+    sys.exit(0)
