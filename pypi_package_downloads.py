@@ -4,7 +4,7 @@ import re
 import os
 import xmlrpclib
 
-PYPI_CACHE = os.path.expanduser("~/.pypi_package_downloads_cache.txt")
+PYPI_CACHE = os.environ.get("PYPI_CACHE", "/var/run/munin/pypi_package_downloads_cache.txt")
 
 client = xmlrpclib.ServerProxy('http://pypi.python.org/pypi')
 
