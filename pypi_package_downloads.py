@@ -40,7 +40,8 @@ def downloads(package, release):
         return ret
 
 def generate_package_info():
-    for package in packages("edavis"):
+    username = os.environ.get("PYPI_USERNAME")
+    for package in packages(username):
         for release in releases(package):
             download_info = downloads(package, release)
             if isinstance(download_info, int):
