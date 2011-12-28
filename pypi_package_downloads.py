@@ -41,6 +41,7 @@ def downloads(package, release):
 
 def generate_package_info():
     username = os.environ.get("PYPI_USERNAME")
+    assert username, "Need a username.  Please run with: PYPI_USERNAME=<name> pypi_package_downloads.py"
     for package in packages(username):
         for release in releases(package):
             download_info = downloads(package, release)
