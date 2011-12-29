@@ -27,20 +27,16 @@ def get_package_releases():
 
 def get_release_downloads(package, release):
     """
-    Return either download_count, or a tuple of (packagetype, download_count)
+    Return the total number of downloads for a given release.
+
+    Some packages upload multiple package types (e.g., sdists, eggs,
+    zips, etc).  This sums them all together.
 
     Note: The packages must be hosted on PyPI for this to do anything.
     If you've just registered the package but keep the actual package
     archives elsewhere, this will return an empty list.
     """
-    resp = client.release_urls(package, release)
-    if len(resp) == 1:
-        return int(resp[0]['downloads'])
-    else:
-        ret = []
-        for stat in resp:
-            ret.append((stat['packagetype'], int(stat['downloads'])))
-        return ret
+    return sum(info['downloads'] for info in client.release_urls(package, release))
 
 def cache():
     """
@@ -53,11 +49,7 @@ def cache():
         for (package, release) in get_package_releases():
             name = clean("%s_%s" % (package, release))
             downloads = get_release_downloads(package, release)
-            if isinstance(downloads, int):
-                fp.write("%s\t%d\n" % (name, downloads))
-            else:
-                for (packagetype, download_count) in downloads:
-                    fp.write("%s_%s\t%d\n" % (name, clean(packagetype), download_count))
+            fp.write("%s\t%d\n" % (name, downloads))
 
 def get_package_stats():
     if not os.path.isfile(PYPI_CACHE):
