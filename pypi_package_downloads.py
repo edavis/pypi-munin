@@ -10,7 +10,7 @@ PYPI_USERNAME = os.environ.get("PYPI_USERNAME")
 SHOW_PAST_VERSIONS = os.environ.get("SHOW_PAST_VERSIONS", True)
 
 if not PYPI_USERNAME:
-    sys.stdout.write("Need a PYPI_USERNAME environment variable. Aborting.")
+    sys.stdout.write("Need a PYPI_USERNAME environment variable. Aborting.\n")
     sys.exit(1)
 
 client = xmlrpclib.ServerProxy('http://pypi.python.org/pypi')
