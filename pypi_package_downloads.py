@@ -43,6 +43,8 @@ def cache():
     Store the package releases and their download counts in a tab-delimited file.
     """
     def clean(s):
+        # http://munin-monitoring.org/wiki/notes_on_datasource_names
+        s = re.sub('^[^A-Za-z_]', '_', s)
         return re.sub('[^A-Za-z0-9_]', '_', s)
 
     with open(PYPI_CACHE, 'w') as fp:
