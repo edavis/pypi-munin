@@ -9,7 +9,7 @@ Install/Configure
 
 ```shell
 $ cd ~/src/
-$ git clone git://github.com/edavis/munin-pypi && cd munin-pypi/
+$ git clone git://github.com/edavis/pypi-munin && cd pypi-munin/
 $ sudo ln -s $(pwd)/pypi_package_downloads.py /etc/munin/plugins/pypi_package_downloads
 $ sudo cp pypi_package_downloads.conf /etc/munin/plugin-conf.d/ # make sure to set username
 $ sudo cp pypi_package_downloads.cron /etc/cron.d/pypi_package_downloads # set the username here, too
