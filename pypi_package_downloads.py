@@ -73,7 +73,6 @@ def config():
     c = []
     c.append("graph_title PyPI Package Downloads")
     c.append("graph_vlabel Number of Downloads")
-    c.append("graph_printf %d")
     for (name, downloads) in get_package_stats():
         c.append("%(name)s.label %(name)s" % {"name": name})
     sys.stdout.write("\n".join(c) + '\n')
