@@ -1,1 +1,4 @@
+# The PyPI download stats are updated once a day.  No need to hit it
+# more than that.
+
 4 23 * * * munin PYPI_USERNAME=username /etc/munin/plugins/pypi_package_downloads cache
