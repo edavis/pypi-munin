@@ -1,0 +1,1 @@
+4 23 * * * munin PYPI_USERNAME=username /etc/munin/plugins/pypi_package_downloads cache
