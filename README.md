@@ -35,6 +35,13 @@ into `/etc/munin/plugin-conf.d/pypi.conf`.
 If the PYPI_USERNAME environment variable is not set the plugin will
 not run.
 
+By default, this plugin only tracks the latest version of each
+package. To track all versions, set the `SHOW_PAST_VERSIONS`
+environment variable to True:
+
+    [pypi]
+    env.SHOW_PAST_VERSIONS True
+
 Once done, run `sudo restart munin-node`.
 
 Test it
