@@ -11,7 +11,7 @@ Installation
 ### System-wide
 
 ```shell
-$ sudo pip install pypi-munin
+$ sudo pip install pypi-munin # or easy_install
 $ sudo ln -s /usr/local/bin/pypi /etc/munin/plugins/pypi
 ```
 
