@@ -2,7 +2,8 @@ pypi-munin -- Track PyPI download stats with munin
 ==================================================
 
 pypi-munin is a [munin](http://munin-monitoring.org/) plugin to track
-the download stats of [PyPI](http://pypi.python.org/pypi) packages.
+the download stats of a user's [PyPI](http://pypi.python.org/pypi)
+packages.
 
 Installation
 ------------
