@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import re
 import os
 import sys
@@ -77,7 +75,7 @@ def execute():
         ret.append("%s.value %d" % (name, downloads))
     sys.stdout.write("\n".join(ret) + '\n')
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         execute()
     else:
