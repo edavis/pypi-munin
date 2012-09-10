@@ -12,6 +12,7 @@ Installation
 ```shell
 $ sudo pip install pypi-munin
 $ sudo ln -s /usr/local/bin/pypi /etc/munin/plugins/pypi
+```
 
 ### Virtualenv
 
