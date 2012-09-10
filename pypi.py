@@ -3,7 +3,7 @@ import os
 import sys
 import xmlrpclib
 
-PYPI_CACHE = os.environ.get("PYPI_CACHE", "/tmp/pypi_package_downloads_cache.txt")
+PYPI_CACHE = "/var/lib/munin/plugin-state/pypi"
 PYPI_USERNAME = os.environ.get("PYPI_USERNAME")
 SHOW_PAST_VERSIONS = os.environ.get("SHOW_PAST_VERSIONS", True)
 
