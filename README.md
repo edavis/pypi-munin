@@ -32,7 +32,7 @@ Put:
 
 into `/etc/munin/plugin-conf.d/pypi.conf`.
 
-If the PYPI_USERNAME environment variable is not set the plugin will
+If the `PYPI_USERNAME` environment variable is not set the plugin will
 not run.
 
 By default, this plugin only tracks the latest version of each
