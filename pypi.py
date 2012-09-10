@@ -5,7 +5,7 @@ import xmlrpclib
 
 PYPI_CACHE = "/var/lib/munin/plugin-state/pypi"
 PYPI_USERNAME = os.environ.get("PYPI_USERNAME")
-SHOW_PAST_VERSIONS = os.environ.get("SHOW_PAST_VERSIONS", True)
+SHOW_PAST_VERSIONS = os.environ.get("SHOW_PAST_VERSIONS", False)
 
 if not PYPI_USERNAME:
     sys.stdout.write("Need a PYPI_USERNAME environment variable. Aborting.\n")
